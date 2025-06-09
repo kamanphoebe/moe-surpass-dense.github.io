@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>MoEs Surpass Dense LLMs</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -46,27 +46,39 @@
 </head>
 <body>
 
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Can Mixture-of-Experts Surpass Dense LLMs<br>Under Strictly Equal Resource?</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                Houyi Li</a><sup>1,2</sup>,
+              <span class="author-block">
+                Ka Man Lo</a><sup>1</sup>,
+              <span class="author-block">
+                Ziqi Wang</a><sup>1</sup>,
+              <span class="author-block">
+                Zili Wang</a><sup>1</sup>,
+              <span class="author-block">
+                Wenzhen Zheng</a><sup>1</sup>,
+              <br>
+              <span class="author-block">
+                Shuigeng Zhou</a><sup>2</sup>,
+              <span class="author-block">
+                Xiangyu Zhang</a><sup>1,3</sup>,
+              <span class="author-block">
+                Daxin Jiang</a><sup>1</sup>
+            </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>StepFun</span>
+                    <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block"><sup>2</sup>Fudan University</span>
+                    <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="author-block"><sup>3</sup>Megvii Technology</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -82,19 +94,8 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,7 +103,7 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -114,6 +115,18 @@
                   <span>arXiv</span>
                 </a>
               </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="24" height="24" />
+                </span>
+                <span>Hugging Face</span>
+              </a>
+            </span>
+
             </div>
           </div>
         </div>
@@ -124,11 +137,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,7 +149,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -148,7 +160,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Mixture-of-Experts (MoE) language models dramatically expand model capacity and achieve remarkable performance without increasing per-token compute. 
+            However, can MoEs <em>surpass</em> dense architectures under strictly equal resource constraints — that is, when the total parameter count, training compute, and data budget are identical?
+            This question remains under-explored despite its significant practical value and potential.
+            In this paper, we propose a novel perspective and methodological framework to study this question thoroughly.
+            First, we comprehensively investigate the architecture of MoEs and achieve an optimal model design that maximizes the performance.
+            Based on this, we subsequently find that an MoE model with activation rate in an optimal region is able to outperform its dense counterpart under the same total parameter, training compute and data resource.
+            More importantly, this optimal region remains consistent across different model sizes.
+            Although additional amount of data turns out to be a trade-off for the enhanced performance, we show that this can be resolved via reusing data.
+            We validate our findings through extensive experiments, training nearly 200 language models at 2B scale and over 50 at 7B scale, cumulatively processing 50 trillion tokens. 
           </p>
         </div>
       </div>
@@ -159,33 +179,29 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -194,7 +210,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
@@ -205,13 +221,19 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Three-step Experimental Methodology</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="content has-text-justified">
+            <p>
+              Drawing insights from a unified parameterization framework for model architecture (see our paper for details), we propose a three-step experimental methodology:
+              <ol>
+                <li><strong>Search for an optimized architecture design</strong> to ensure each model candidate achieves its (near-)optimal performance.</li>
+                <li> <strong>Explore the optimal activation rate (AR)</strong> based on the optimized model architecture, keeping the total parameters and compute budget fixed.</li>
+                <li> <strong>Present a data reuse strategy</strong> to address the additional data demand of MoE models, thereby equating data resources.</li>
+              </ol>
+              We also analyze the efficacy of this framework on downstream tasks.
+            </p>
           </div>
         </div>
       </div>
@@ -225,28 +247,24 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3">Optimal Activation Rate</h2>
+      <p>
+        Based on our optimized model backbones (see our paper for details), we build a series of MoE models with non-vocabulary parameters $N \approx 2\text{B}$ (Figure 1) and $N \approx 7\text{B}$ (Figure 2). 
+        Our experimental results identify the existence of an optimal AR region, where MoE models can outperform their dense counterparts under the same training budget.
+        Furthermore, the optimal AR point within this region , $r_\text{a}^{**} \approx 20\%$, remains consistent across different model sizes. 
+      </p>
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate"/>
+          <img src="static/images/2B_keep_compute.png" alt="2B models with fixed compute"/>
+          <p class="subtitle has-text-centered">
+            Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
+            <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
+            Conversely, with a fixed $r_\text{a}$, increasing $D$ results in a <strong>linear</strong> performance gain. 
+            These findings identify an optimal activation rate, $r_\text{a}^{**} = 20\%$, that remains consistent across different values of $D$ when $N$ is constant.
+            <strong>(b)</strong> From the perspective of a fixed training compute $C$, the optimal activation rate $r_\text{a}^{**} = 20\%$ can be clearly observed.
+          </p>
         </div>
       </div>
     </div>
@@ -254,13 +272,81 @@
 </section>
 <!-- End video carousel -->
 
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Data Reuse Strategy</h2>
+      <p>
+        To eliminate the additional data demand for MoEs to outperform their dense counterparts, we investigate data reusability by training models for multiple epochs using a fixed, smaller dataset.
+        We explore two distinct data reuse schemes: the strict scheme ensures that both MoE and dense models are trained under <em>completely</em> equal conditions; 
+        the loose scheme relaxes the constraint of identical data volume by fixing the number of training epochs to 2.
+      </p>
+      <p>
+        As shown in Figure 2b, the strict data reuse scheme (blue dashed line) only marginally diminishes performance, and MoE models continue to outperform dense baselines.
+        Surprisingly, the loose scheme (green dashed line) often outperforms training on the unique dataset for a single epoch.
+      </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/7B_keep_data.png" alt="7B models with fixed data"/>
+          <img src="static/images/7B_keep_compute.png" alt="7B models with fixed compute"/>
+          <p class="subtitle has-text-centered">
+            Figure 2: Performance of $N \approx 7\text{B}$ models trained with varying data sizes $D$ and activation rate $r_\text{a}$.
+            The optimal activation rate, $r_\text{a}^{**}=20\%$, align with the findings for the 2B models (Figure 1).
+            Additionally, compared to training on the unique dataset, the strict data reuse scheme shows only a slight performance reduction, while the loose scheme often yields better performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
 
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Analysis of Downstream Performance</h2>
+      <p>
+        To assess whether the optimal ARs generalize to downstream tasks, we conduct SFT on our 7B pre-trained models (trained w/ and w/o strict data reuse) 
+        and evaluate both the pre-trained models and SFT-ed models on a total number of 29 benchmarks (Figure 3; Table 2).
+        The results demonstrate the universality of the optimal AR point ($r_\text{a}^{**} = 20\%$) across different training phases and data domains.
+        See our paper for more analyses.
+      </p>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/7B_downstream_pretrain.png" alt="Downstream performance of 7B pretrained models"/>
+          <br>
+          <img src="static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models"/>
+          <p class="subtitle has-text-centered">
+            Figure 3: Downstream performance of 7B models: pre-trained (<strong>top</strong>) and SFT-ed (<strong>middle and bottom</strong>) versions. 
+            Across all benchmark types, MoE models with $r_\text{a}=20\%$ outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
 
-
+<section class="section" style="background-color: #ffe6e6; width: 100%; padding: 20px;">
+  <div class="container is-max-desktop"> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <p style="text-align: center; font-size: 1.0rem; font-family: 'Noto Sans', sans-serif; color: #838383;">
+          Mixture-of-Experts can surpass dense LLMs under equal total parameters, compute, and data constraints, <br>
+          provided that the backbones are optimized and the activation rates reside in the optimal region.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,7 +356,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
