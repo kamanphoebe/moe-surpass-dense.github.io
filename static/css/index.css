@@ -135,14 +135,31 @@ body {
 
 
 .bling-callout {
-  border: 2px solid lightpink;
+  border: 2px solid darkcyan; /* 3. Border of the call out block into dark cyan */
   padding: 20px;
   margin: 20px 0;
-  color: lightpink;
-  font-weight: bold;
+  color: cyan; /* 1. Font color into cyan */
+  font-style: italic; /* 4. Font to be italic */
+  font-size: 1.2em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
   overflow: hidden; /* Hide the shine overflow */
+
+  /* The following styles are for the shine effect and remain the same */
+  /* If you also want the *text itself* to have a border, that's trickier
+     and usually involves text-shadow or SVG filters, which is less common
+     for simple text emphasis. I've assumed you meant the callout block's border.
+     If you truly meant text border, please clarify! */
 }
+
+.bling-callout p { /* Target the paragraph inside for text styling /
+  color: cyan; / Font color into cyan /
+  / Create the text border (outline) using text-shadow */
+  text-shadow:
+  -1px -1px 0 darkcyan,
+  1px -1px 0 darkcyan,
+  -1px  1px 0 darkcyan,
+  1px  1px 0 darkcyan;
+  }
 
 /* Create the shine effect */
 .bling-callout::before {
@@ -164,4 +181,5 @@ body {
   100% {
     left: 200%; /* Move across the element */
   }
+}
 }
