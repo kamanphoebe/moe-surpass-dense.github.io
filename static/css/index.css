@@ -134,4 +134,11 @@ body {
 }
 
 
-
+.conclusion-callout.bold-bg {
+  background-color: #28a745; /* A success/positive color */
+  color: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 6px;
+  text-align: center;
+}
