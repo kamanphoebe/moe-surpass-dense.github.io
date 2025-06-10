@@ -271,9 +271,10 @@
                 <figure>
                 <!-- Your image here -->
                   <img src="./static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 51%; height: auto;"/>
-                  <img src="./static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 46%; height: auto;"/>
-                  <p style="text-align: center; font-size: 1.0rem;">(a) Fixed $D$ (solid) or $r_\text{a}$ (dashed) &nbsp;&nbsp;&nbsp;&nbsp; (b) Fixed $C$</p>
-                  <figcaption style="text-align: left; font-style: normal; font-size: 1.0rem;">
+                  <img src="./static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 46.5%; height: auto;"/>
+                  <span style="padding-left: 40px; padding-right: 50px; font-size: 0.92rem;">(a) Fixed $D$ (solid) or $r_\text{a}$ (dashed)</span>
+                  <span style="font-size: 0.92rem;">(a) (b) Fixed $C$</span>
+                  <figcaption style="text-align: left; font-style: normal; font-size: 0.92rem;">
                     Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
                     <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
                     Conversely, with a fixed $r_\text{a}$, increasing $D$ results in a <strong>linear</strong> performance gain. 
@@ -311,9 +312,10 @@
                 <figure>
                   <!-- Your image here -->
                     <img src="./static/images/7B_keep_data.png" alt="7B models with fixed data" style="width: 51%; height: auto;"/>
-                    <img src="./static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 46%; height: auto;"/>
-                    <p style="text-align: center; font-size: 1.0rem;">(a) Fixed $D$ &nbsp;&nbsp;&nbsp;&nbsp; (b) Fixed $C$ and reusing data</p>
-                    <figcaption style="text-align: left; font-style: normal; font-size: 1.0rem;">
+                    <img src="./static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 45.5%; height: auto;"/>
+                    <span style="padding-left: 40px; padding-right: 50px; font-size: 0.92rem;">(a) Fixed $D$</span>
+                    <span style="font-size: 0.92rem;">(b) Fixed $C$ and reusing data</span>
+                    <figcaption style="text-align: left; font-style: normal; font-size: 0.92rem;">
                     Figure 2: Performance of $N \approx 7\text{B}$ models trained with varying data sizes $D$ and activation rate $r_\text{a}$.
                     The optimal activation rate, $r_\text{a}^{**}=20\%$, align with the findings for the 2B models (Figure 1).
                     Additionally, compared to training on the unique dataset, the strict data reuse scheme shows only a slight performance reduction, while the loose scheme often yields better performance.
