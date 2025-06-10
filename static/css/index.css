@@ -135,12 +135,12 @@ body {
 
 
 .bling-callout {
-  border: 2px solid cyan;
+  border: 2px solid rgb(250, 144, 162);
   padding: 20px;
   margin: 20px 0;
-  color: cyan; /* 1. Font color into cyan */
+  color: lightpink; /* 1. Font color into cyan */
   font-style: italic; /* 4. Font to be italic */
-  font-size: 2.2em; /* 5. Increase the font size (adjust '1.2em' as needed) */
+  font-size: 1.8em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
   overflow: hidden; /* Hide the shine overflow */
 
@@ -155,10 +155,10 @@ body {
   color: cyan; / Font color into cyan /
   / Create the text border (outline) using text-shadow */
   text-shadow:
-  -1px -1px 0 darkcyan,
-  1px -1px 0 darkcyan,
-  -1px  1px 0 darkcyan,
-  1px  1px 0 darkcyan;
+  -1px -1px 0 rgb(250, 144, 162),
+  1px -1px 0 rgb(250, 144, 162),
+  -1px  1px 0 rgb(250, 144, 162),
+  1px  1px 0 rgb(250, 144, 162);
   }
 
 /* Create the shine effect */
