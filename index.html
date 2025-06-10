@@ -51,34 +51,33 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Can Mixture-of-Experts Surpass Dense LLMs Under Strictly Equal Resource?</h1>
+            <h1 class="title is-1 publication-title" style="margin-bottom: 20px;">Can Mixture-of-Experts Surpass Dense LLMs Under Strictly Equal Resource?</h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-                <span class="author-block" style="color: rgb(26, 82, 130);">
-                Houyi Li<sup>1,2</sup>,</span>
-                <span class="author-block" style="color: rgb(26, 82, 130);">
-                Ka Man Lo<sup>1</sup>,</span>
-                <span class="author-block" style="color: rgb(26, 82, 130);">
+                <!-- Paper authors -->
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
+                Houyi Li<sup>1,2</sup></span>
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
+                Ka Man Lo<sup>1</sup></span>
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
                 Ziqi Wang<sup>1</sup>,</span>
-                <span class="author-block" style="color: rgb(26, 82, 130);"></span>
-                Zili Wang<sup>1</sup>,</span>
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
+                Zili Wang<sup>1</sup></span>
                 <span class="author-block" style="color: rgb(26, 82, 130);">
-                Wenzhen Zheng<sup>1</sup>,</span>
+                Wenzhen Zheng<sup>1</sup></span>
                 <br>
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
+                Shuigeng Zhou<sup>2</sup></span>
+                <span class="author-block" style="color: rgb(26, 82, 130); padding-right: 20px;">
+                Xiangyu Zhang<sup>1,3</sup></span>
                 <span class="author-block" style="color: rgb(26, 82, 130);">
-                Shuigeng Zhou<sup>2</sup>,</span>
-                <span class="author-block" style="color: rgb(26, 82, 130);">
-                Xiangyu Zhang<sup>1,3</sup>,</span>
-                <span class="author-block" style="color: rgb(26, 82, 130);"></span>
                 Daxin Jiang<sup>1</sup></span>
             </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>StepFun</span>
-                    <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <span class="author-block"><sup>2</sup>Fudan University</span>
-                    <span class="author-block">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <span class="author-block"><sup>3</sup>Megvii Technology</span>
+                    <span><br></span>
+                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>1</sup>StepFun</span>
+                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>2</sup>Fudan University</span>
+                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>3</sup>Megvii Technology</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -226,7 +225,7 @@
             <!-- Paper video. -->
             <h2 class="title is-3">Three-step Experimental Methodology</h2>
             <p>
-              Drawing insights from a unified parameterization framework for model architecture (see our paper for details), we propose a three-step experimental methodology:
+              Drawing insights from a unified parameterization framework for model architecture (see our [paper]() for details), we propose a three-step experimental methodology:
               <ol>
                 <li><strong>Search for an optimized architecture design</strong> to ensure each model candidate achieves its (near-)optimal performance.</li>
                 <li> <strong>Explore the optimal activation rate (AR)</strong> based on the optimized model architecture, keeping the total parameters and compute budget fixed.</li>
@@ -252,22 +251,22 @@
           <div class="content has-text-justified">
             <h2 class="title is-3">Optimal Activation Rate</h2>
             <p>
-              Based on our optimized model backbones (see our paper for details), we build a series of MoE models with non-vocabulary parameters $N \approx 2\text{B}$ (Figure 1) and $N \approx 7\text{B}$ (Figure 2). 
+              Based on our optimized model backbones (see our [paper]() for details), we build a series of MoE models with non-vocabulary parameters $N \approx 2\text{B}$ (Figure 1) and $N \approx 7\text{B}$ (Figure 2). 
               Our experimental results identify the existence of an optimal AR region, where MoE models can outperform their dense counterparts under the same training budget.
               Furthermore, the optimal AR point within this region , $r_\text{a}^{**} \approx 20\%$, remains consistent across different model sizes. 
             </p>
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item">
                 <!-- Your image here -->
-                  <img src="static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 50%; max-width: 600px; height: auto;"/>
-                  <img src="static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 50%; max-width: 600px; height: auto;"/>
-                <p class="subtitle has-text-centered">
-                  Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
-                  <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
-                  Conversely, with a fixed $r_\text{a}$, increasing $D$ results in a <strong>linear</strong> performance gain. 
-                  These findings identify an optimal activation rate, $r_\text{a}^{**} = 20\%$, that remains consistent across different values of $D$ when $N$ is constant.
-                  <strong>(b)</strong> From the perspective of a fixed training compute $C$, the optimal activation rate $r_\text{a}^{**} = 20\%$ can be clearly observed.
-                </p>
+                  <img src="static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 55%; height: auto;"/>
+                  <img src="static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 45%; height: auto;"/>
+                  <figcaption>
+                    Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
+                    <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
+                    Conversely, with a fixed $r_\text{a}$, increasing $D$ results in a <strong>linear</strong> performance gain. 
+                    These findings identify an optimal activation rate, $r_\text{a}^{**} = 20\%$, that remains consistent across different values of $D$ when $N$ is constant.
+                    <strong>(b)</strong> From the perspective of a fixed training compute $C$, the optimal activation rate $r_\text{a}^{**} = 20\%$ can be clearly observed.
+                  </figcaption>
               </div>
             </div>
           </div>
@@ -298,13 +297,13 @@
                   <div id="results-carousel" class="carousel results-carousel">
                     <div class="item">
                       <!-- Your image here -->
-                      <img src="static/images/7B_keep_data.png" alt="7B models with fixed data" style="width: 50%; max-width: 600px; height: auto;"/>
-                      <img src="static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 50%; max-width: 600px; height: auto;"/>
-                      <p class="subtitle has-text-centered">
+                      <img src="static/images/7B_keep_data.png" alt="7B models with fixed data" style="width: 55%; max-width: 600px; height: auto;"/>
+                      <img src="static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 45%; max-width: 600px; height: auto;"/>
+                      <figcaption>
                         Figure 2: Performance of $N \approx 7\text{B}$ models trained with varying data sizes $D$ and activation rate $r_\text{a}$.
                         The optimal activation rate, $r_\text{a}^{**}=20\%$, align with the findings for the 2B models (Figure 1).
                         Additionally, compared to training on the unique dataset, the strict data reuse scheme shows only a slight performance reduction, while the loose scheme often yields better performance.
-                      </p>
+                      </figcaption>
               </div>
             </div>
           </div>
@@ -332,13 +331,13 @@
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item">
                 <!-- Your image here -->
-                <img src="static/images/7B_downstream_pretrain.png" alt="Downstream performance of 7B pretrained models" style="width: 100%; max-width: 600px; height: auto;"/>
+                <img src="static/images/7B_downstream_pretrain.png" alt="Downstream performance of 7B pretrained models" style="width: 100%; height: auto;"/>
                 <br>
-                <img src="static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models" style="width: 100%; max-width: 600px; height: auto;"/>
-                <p class="subtitle has-text-centered">
+                <img src="static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models" style="width: 100%; height: auto;"/>
+                <figcaption>
                   Figure 3: Downstream performance of 7B models: pre-trained (<strong>top</strong>) and SFT-ed (<strong>middle and bottom</strong>) versions. 
                   Across all benchmark types, MoE models with $r_\text{a}=20\%$ outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%.
-                </p>
+                </figcaption>
               </div>
             </div>
           </div>
