@@ -87,9 +87,9 @@
 
                   <div class="is-size-5 publication-authors">
                     <span><br></span>
-                    <span class="author-block" style="font-size: 1.1rem; padding-right: 20px;"><sup>1</sup>StepFun</span>
-                    <span class="author-block" style="font-size: 1.1rem; padding-right: 20px;"><sup>2</sup>Fudan University</span>
-                    <span class="author-block" style="font-size: 1.1rem; padding-right: 20px;"><sup>3</sup>Megvii Technology</span>
+                    <span class="author-block" style="font-size: 1.2rem; padding-right: 20px;"><sup>1</sup>StepFun</span>
+                    <span class="author-block" style="font-size: 1.2rem; padding-right: 20px;"><sup>2</sup>Fudan University</span>
+                    <span class="author-block" style="font-size: 1.2rem; padding-right: 20px;"><sup>3</sup>Megvii Technology</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -272,7 +272,7 @@
                 <figure>
                 <!-- Your image here -->
                   <img src="./static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 52%; height: auto;"/>
-                  <img src="./static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 48%; height: auto;"/>
+                  <!-- <img src="./static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 48%; height: auto;"/> -->
                   <figcaption>
                     Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
                     <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
@@ -352,10 +352,8 @@
                 <br>
                 <img src="./static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models" style="width: 100%; height: auto;"/>
                 <figcaption>
-                  <!-- Figure 3: Downstream performance of 7B models: pre-trained (<strong>top</strong>) and SFT-ed (<strong>middle and bottom</strong>) versions. 
-                  Across all benchmark types, MoE models with $r_\text{a}=20\%$ outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%. -->
                   Figure 3: Downstream performance of 7B models: pre-trained (<strong>top</strong>) and SFT-ed (<strong>middle and bottom</strong>) versions. 
-                  Across all benchmark types, MoE models with outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%.
+                  Across all benchmark types, MoE models with $r_\text{a}=20\%$ outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%.
                 </figcaption>
               </figure>
               </div>
