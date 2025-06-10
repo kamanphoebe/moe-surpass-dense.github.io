@@ -43,6 +43,18 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -75,9 +87,9 @@
 
                   <div class="is-size-5 publication-authors">
                     <span><br></span>
-                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>1</sup>StepFun</span>
-                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>2</sup>Fudan University</span>
-                    <span class="author-block" style="font-size: 0.75rem; padding-right: 20px;"><sup>3</sup>Megvii Technology</span>
+                    <span class="author-block" style="font-size: 1.0rem; padding-right: 20px;"><sup>1</sup>StepFun</span>
+                    <span class="author-block" style="font-size: 1.0rem; padding-right: 20px;"><sup>2</sup>Fudan University</span>
+                    <span class="author-block" style="font-size: 1.0rem; padding-right: 20px;"><sup>3</sup>Megvii Technology</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -257,9 +269,10 @@
             </p>
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item">
+                <figure>
                 <!-- Your image here -->
-                  <img src="static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 55%; height: auto;"/>
-                  <img src="static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 45%; height: auto;"/>
+                  <img src="static/images/2B_keep_data.png" alt="2B models with fixed data or activation rate" style="width: 50%; height: auto;"/>
+                  <img src="static/images/2B_keep_compute.png" alt="2B models with fixed compute" style="width: 50%; height: auto;"/>
                   <figcaption>
                     Figure 1: Performance of $N \approx 2\text{B}$ models trained with varying data sizes $D$ and activation rates $r_\text{a}$.
                     <strong>(a)</strong> With a fixed $D$, the performance gain exhibits a <strong>non-linear</strong> dependence on the training budget $C$. 
@@ -267,6 +280,7 @@
                     These findings identify an optimal activation rate, $r_\text{a}^{**} = 20\%$, that remains consistent across different values of $D$ when $N$ is constant.
                     <strong>(b)</strong> From the perspective of a fixed training compute $C$, the optimal activation rate $r_\text{a}^{**} = 20\%$ can be clearly observed.
                   </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -285,25 +299,27 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
             <h2 class="title is-3">Data Reuse Strategy</h2>
-                  <p>
-                    To eliminate the additional data demand for MoEs to outperform their dense counterparts, we investigate data reusability by training models for multiple epochs using a fixed, smaller dataset.
-                    We explore two distinct data reuse schemes: the strict scheme ensures that both MoE and dense models are trained under <em>completely</em> equal conditions; 
-                    the loose scheme relaxes the constraint of identical data volume by fixing the number of training epochs to 2.
-                  </p>
-                  <p>
-                    As shown in Figure 2b, the strict data reuse scheme (blue dashed line) only marginally diminishes performance, and MoE models continue to outperform dense baselines.
-                    Surprisingly, the loose scheme (green dashed line) often outperforms training on the unique dataset for a single epoch.
-                  </p>
-                  <div id="results-carousel" class="carousel results-carousel">
-                    <div class="item">
-                      <!-- Your image here -->
-                      <img src="static/images/7B_keep_data.png" alt="7B models with fixed data" style="width: 55%; max-width: 600px; height: auto;"/>
-                      <img src="static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 45%; max-width: 600px; height: auto;"/>
-                      <figcaption>
-                        Figure 2: Performance of $N \approx 7\text{B}$ models trained with varying data sizes $D$ and activation rate $r_\text{a}$.
-                        The optimal activation rate, $r_\text{a}^{**}=20\%$, align with the findings for the 2B models (Figure 1).
-                        Additionally, compared to training on the unique dataset, the strict data reuse scheme shows only a slight performance reduction, while the loose scheme often yields better performance.
-                      </figcaption>
+              <p>
+                To eliminate the additional data demand for MoEs to outperform their dense counterparts, we investigate data reusability by training models for multiple epochs using a fixed, smaller dataset.
+                We explore two distinct data reuse schemes: the strict scheme ensures that both MoE and dense models are trained under <em>completely</em> equal conditions; 
+                the loose scheme relaxes the constraint of identical data volume by fixing the number of training epochs to 2.
+              </p>
+              <p>
+                As shown in Figure 2b, the strict data reuse scheme (blue dashed line) only marginally diminishes performance, and MoE models continue to outperform dense baselines.
+                Surprisingly, the loose scheme (green dashed line) often outperforms training on the unique dataset for a single epoch.
+              </p>
+              <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                <figure>
+                  <!-- Your image here -->
+                  <img src="./static/images/7B_keep_data.png" alt="7B models with fixed data" style="width: 50%; height: auto;"/>
+                  <img src="./static/images/7B_keep_compute.png" alt="7B models with fixed compute" style="width: 50%; height: auto;"/>
+                  <figcaption>
+                    Figure 2: Performance of $N \approx 7\text{B}$ models trained with varying data sizes $D$ and activation rate $r_\text{a}$.
+                    The optimal activation rate, $r_\text{a}^{**}=20\%$, align with the findings for the 2B models (Figure 1).
+                    Additionally, compared to training on the unique dataset, the strict data reuse scheme shows only a slight performance reduction, while the loose scheme often yields better performance.
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -330,14 +346,16 @@
             </p>
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item">
+              <figure>
                 <!-- Your image here -->
-                <img src="static/images/7B_downstream_pretrain.png" alt="Downstream performance of 7B pretrained models" style="width: 100%; height: auto;"/>
+                <img src="./static/images/7B_downstream_pretrain.png" alt="Downstream performance of 7B pretrained models" style="width: 100%; height: auto;"/>
                 <br>
-                <img src="static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models" style="width: 100%; height: auto;"/>
+                <img src="./static/images/7B_downstream_sft.png" alt="Downstream performance of 7B SFT-ed models" style="width: 100%; height: auto;"/>
                 <figcaption>
                   Figure 3: Downstream performance of 7B models: pre-trained (<strong>top</strong>) and SFT-ed (<strong>middle and bottom</strong>) versions. 
                   Across all benchmark types, MoE models with $r_\text{a}=20\%$ outperform dense model trained with twice the compute, aligning with upstream observations that the optimal AR is 20%.
                 </figcaption>
+              </figure>
               </div>
             </div>
           </div>
