@@ -134,11 +134,11 @@ body {
 }
 
 
-.conclusion-callout.bold-bg {
-  background-color: #28a745; /* A success/positive color */
-  color: white;
-  padding: 25px;
+.conclusion-callout.subtle {
+  border-left: 5px solid #007bff; /* A primary color accent */
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 20px;
   margin: 20px 0;
-  border-radius: 6px;
-  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
