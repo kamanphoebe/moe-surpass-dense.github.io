@@ -140,7 +140,7 @@ body {
   margin: 20px 0;
   color: lightpink; /* 1. Font color into cyan */
   font-style: italic; /* 4. Font to be italic */
-  font-size: 1.2em; /* 5. Increase the font size (adjust '1.2em' as needed) */
+  font-size: 1.3em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
   overflow: hidden; /* Hide the shine overflow */
 
@@ -151,13 +151,13 @@ body {
   /* For a truly organic blob, you'd need even more points or a specific path() */
 }
 
-/* .bling-callout p {
+.bling-callout p {
   text-shadow:
-  -1px -1px 0 rgb(250, 144, 162),
-  1px -1px 0 rgb(250, 144, 162),
-  -1px  1px 0 rgb(250, 144, 162),
-  1px  1px 0 rgb(250, 144, 162);
-  } */
+  -0.5px -0.5px 0 rgb(250, 144, 162),
+  0.5px -0.5px 0 rgb(250, 144, 162),
+  -0.5px  0.5px 0 rgb(250, 144, 162),
+  0.5px  0.5px 0 rgb(250, 144, 162);
+  }
 
 /* Create the shine effect */
 .bling-callout::before {
