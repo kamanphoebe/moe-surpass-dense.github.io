@@ -140,15 +140,17 @@ body {
   margin: 20px 0;
   color: lightpink; /* 1. Font color into cyan */
   font-style: italic; /* 4. Font to be italic */
-  font-size: 1.8em; /* 5. Increase the font size (adjust '1.2em' as needed) */
+  font-size: 1.4em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
   overflow: hidden; /* Hide the shine overflow */
 
   /* --- Clip-path for an organic blob shape --- */
   /* This is generated using a clip-path generator for more complex shapes */
-  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%); /* An octagon shape for a blob-like feel */
+  /* -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%); */
   /* For a truly organic blob, you'd need even more points or a specific path() */
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 90% 100%, 0% 100%); /* Notched bottom-right corner */
 }
 
 .bling-callout p { /* Target the paragraph inside for text styling /
