@@ -143,7 +143,6 @@ body {
   font-size: 1.25em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
   overflow: hidden; /* Hide the shine overflow */
-  background-color: rgb(255, 230, 234);
 
   /* --- Clip-path for an organic blob shape --- */
   /* This is generated using a clip-path generator for more complex shapes */
