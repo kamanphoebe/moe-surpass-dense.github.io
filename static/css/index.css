@@ -138,7 +138,7 @@ body {
   border: 2px solid rgb(254, 157, 173);
   padding: 20px;
   margin: 20px 0;
-  color: lightpink; /* 1. Font color into cyan */
+  color: rgb(251, 191, 200); /* 1. Font color into cyan */
   font-style: italic; /* 4. Font to be italic */
   font-size: 1.25em; /* 5. Increase the font size (adjust '1.2em' as needed) */
   position: relative;
@@ -153,10 +153,10 @@ body {
 
 .bling-callout p {
   text-shadow:
-  -0.5px -0.5px 0 rgb(254, 157, 173),
-  0.5px -0.5px 0 rgb(254, 157, 173),
-  -0.5px  0.5px 0 rgb(254, 157, 173),
-  0.5px  0.5px 0 rgb(254, 157, 173);
+  -0.3px -0.3px 0 rgb(254, 157, 173),
+  0.3px -0.3px 0 rgb(254, 157, 173),
+  -0.3px  0.3px 0 rgb(254, 157, 173),
+  0.3px  0.3px 0 rgb(254, 157, 173);
   }
 
 /* Create the shine effect */
