@@ -135,7 +135,7 @@ body {
 
 
 .bling-callout {
-  border: 2px solid rgb(255, 167, 181);
+  border: 2px solid rgb(254, 157, 173);
   padding: 20px;
   margin: 20px 0;
   color: lightpink; /* 1. Font color into cyan */
@@ -153,10 +153,10 @@ body {
 
 .bling-callout p {
   text-shadow:
-  -0.5px -0.5px 0 rgb(255, 167, 181),
-  0.5px -0.5px 0 rgb(255, 167, 181),
-  -0.5px  0.5px 0 rgb(255, 167, 181),
-  0.5px  0.5px 0 rgb(255, 167, 181);
+  -0.5px -0.5px 0 rgb(254, 157, 173),
+  0.5px -0.5px 0 rgb(254, 157, 173),
+  -0.5px  0.5px 0 rgb(254, 157, 173),
+  0.5px  0.5px 0 rgb(254, 157, 173);
   }
 
 /* Create the shine effect */
