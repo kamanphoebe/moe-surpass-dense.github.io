@@ -153,10 +153,10 @@ body {
 
 .bling-callout p {
   text-shadow:
-  -0.3px -0.3px 0 rgb(249, 140, 158),
-  0.3px -0.3px 0 rgb(249, 140, 158),
-  -0.3px  0.3px 0 rgb(249, 140, 158),
-  0.3px  0.3px 0 rgb(249, 140, 158);
+  -0.4px -0.4px 0 rgb(249, 140, 158),
+  0.4px -0.4px 0 rgb(249, 140, 158),
+  -0.4px  0.4px 0 rgb(249, 140, 158),
+  0.4px  0.4px 0 rgb(249, 140, 158);
   }
 
 /* Create the shine effect */
